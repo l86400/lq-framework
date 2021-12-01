@@ -4,14 +4,39 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.github.l86400</groupId>
+        <groupId>io.github.l86400</groupId>
         <artifactId>framework-dependencies</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>./framework-dependencies/pom.xml</relativePath>
     </parent>
 
     <artifactId>lq-framework</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
+
+    <name>lq-framework</name>
+    <description>86400 Framework</description>
+    <url>https://github.com/l86400/lq-framework</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <scm>
+        <tag>master</tag>
+        <url>git@github.com:l86400/lq-framework.git</url>
+        <connection>scm:git@github.com:l86400/lq-framework.git</connection>
+        <developerConnection>scm:git@github.com:l86400/lq-framework.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>86400</name>
+            <email>516161832@qq.com</email>
+        </developer>
+    </developers>
 
     <modules>
         <module>framewrok-util</module>
@@ -22,19 +47,16 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
-    <build>
-        <plugins>
-            <!--插件，统一版本管理 mvn versions:set -DnewVersion=Y.Y.Z-SNAPSHOT-->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
-                <version>2.8.1</version>
-                <configuration>
-                    <generateBackupPoms>false</generateBackupPoms>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 </project>
