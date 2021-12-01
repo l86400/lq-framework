@@ -1,4 +1,4 @@
-package io.github.l86400.util;
+package io.github.l86400.util.string;
 
 /**
  * @author 86400
